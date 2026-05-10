@@ -68,40 +68,49 @@
           <div class="sheet-window">
             <div class="sheet-toolbar"></div>
             <div class="sheet-grid">
-              <div class="cell head">Path</div>
-              <div class="cell head">Net %</div>
-              <div class="cell head">Final</div>
-              <div class="cell head">Exchange</div>
-              <div class="cell">USDT -> FIO -> BTC -> USDT</div>
-              <div class="cell positive">0.98%</div>
-              <div class="cell">100.98</div>
-              <div class="cell">CoinEx</div>
-              <div class="cell">USDT -> METAL -> USDC -> USDT</div>
-              <div class="cell muted">-0.12%</div>
-              <div class="cell">99.88</div>
-              <div class="cell">Gate</div>
-              <div class="cell">USDT -> LINK -> BTC -> USDT</div>
-              <div class="cell positive">0.21%</div>
-              <div class="cell">100.21</div>
-              <div class="cell">Bitget</div>
+              <div class="cell head rank">Rank</div>
+              <div class="cell head path">Path</div>
+              <div class="cell head">Net Profit %</div>
+              <div class="cell head">Profit</div>
+              <div class="cell head">Final Amount</div>
+              <div class="cell rank">1</div>
+              <div class="cell path">USDT -> BTC -> STC -> USDT</div>
+              <div class="cell positive">2.2407%</div>
+              <div class="cell">11.203360</div>
+              <div class="cell">511.203360</div>
+              <div class="cell rank">2</div>
+              <div class="cell path">USDT -> TLOS -> BTC -> USDT</div>
+              <div class="cell positive">1.4013%</div>
+              <div class="cell">7.006324</div>
+              <div class="cell">507.006324</div>
+              <div class="cell rank">3</div>
+              <div class="cell path">USDT -> BTC -> PEPE -> USDT</div>
+              <div class="cell positive">1.1384%</div>
+              <div class="cell">5.692248</div>
+              <div class="cell">505.692248</div>
+              <div class="cell rank">4</div>
+              <div class="cell path">USDT -> GLMR -> BTC -> USDT</div>
+              <div class="cell positive">1.0709%</div>
+              <div class="cell">5.354348</div>
+              <div class="cell">505.354348</div>
             </div>
           </div>
         </div>
         <div class="mini-shots" aria-hidden="true">
           <div class="mini-shot high">
             <strong>Gate</strong>
-            <span>расчетный всплеск</span>
-            <b>+10.24%</b>
+            <span>видели расчетный всплеск</span>
+            <b>до 11%</b>
           </div>
           <div class="mini-shot mid">
-            <strong>CoinEx</strong>
-            <span>рабочий плюс</span>
-            <b>+1.18%</b>
+            <strong>Старт 500</strong>
+            <span>пример финала</span>
+            <b>511.20</b>
           </div>
           <div class="mini-shot low">
-            <strong>OKX</strong>
-            <span>около нуля</span>
-            <b>-0.06%</b>
+            <strong>Обновление</strong>
+            <span>ручное или 5 мин</span>
+            <b>live</b>
           </div>
         </div>
         <div class="hero-content">
@@ -220,21 +229,41 @@
           <p class="eyebrow">Ключевая выгода</p>
           <h2 id="inside-title">Остаешься внутри одной биржи и быстро смотришь связки</h2>
         </div>
+        <div class="menu-demo" aria-label="Пример меню Arb Scanner в Google Таблицах">
+          <div class="google-bar">
+            <span class="sheet-icon">▦</span>
+            <strong>OKX Scanner Master</strong>
+            <span>Файл</span>
+            <span>Правка</span>
+            <span>Вид</span>
+            <span>Вставка</span>
+            <span>Формат</span>
+            <span>Данные</span>
+            <span>Инструменты</span>
+            <span>Расширения</span>
+            <span>Справка</span>
+            <span class="arb-menu">Arb Scanner</span>
+          </div>
+          <div class="menu-callout">
+            <strong>Меню создано разработчиком</strong>
+            <span>Сканер управляется прямо из Google Таблицы: запуск, настройка листов и автообновление.</span>
+          </div>
+        </div>
         <div class="steps">
           <div class="step">
             <span>1</span>
-            <h3>Выбрать биржу</h3>
-            <p>Gate, CoinEx, Bitget, MEXC, OKX или HTX. Каждый сканер работает отдельно.</p>
+            <h3>Setup</h3>
+            <p>Создает рабочие листы, настройки, таблицу результатов и FAQ внутри Google Таблицы.</p>
           </div>
           <div class="step">
             <span>2</span>
-            <h3>Настроить бюджет</h3>
-            <p>В таблице можно менять стартовую сумму, комиссию и фильтр расчетного результата.</p>
+            <h3>Scan now</h3>
+            <p>Запускает ручное сканирование выбранной биржи и сразу обновляет список расчетных связок.</p>
           </div>
           <div class="step">
             <span>3</span>
-            <h3>Обновлять рынок</h3>
-            <p>Ручной запуск доступен в любой момент для точечной проверки. Автообновление настроено на 5 минут, чтобы не перегружать Google Таблицы и API бирж.</p>
+            <h3>Auto update 5 min</h3>
+            <p>Включает продуманное автообновление каждые 5 минут, чтобы не перегружать Google Таблицы и API бирж.</p>
           </div>
         </div>
       </section>
@@ -257,7 +286,12 @@
                 <tr>
                   <td>Gate</td>
                   <td>USDT -> coin -> USDC -> USDT</td>
-                  <td class="green strong">10.24%</td>
+                  <td class="green strong">до 11%</td>
+                </tr>
+                <tr>
+                  <td>Gate</td>
+                  <td>USDT -> BTC -> STC -> USDT</td>
+                  <td class="green strong">2.24%</td>
                 </tr>
                 <tr>
                   <td>CoinEx</td>
@@ -275,6 +309,7 @@
           <div class="scenario-note">
             <strong>Рынок бывает разным:</strong>
             иногда сканер показывает минус или около нуля, иногда появляются сильные расчетные всплески.
+            В таблице видны Rank, Path, Net Profit %, Profit и Final Amount - удобно быстро отбирать варианты.
           </div>
         </div>
         <div>
@@ -289,6 +324,49 @@
             Сценарии обновления продуманы под обычного пользователя: автообновление работает в устойчивом режиме,
             а ручной запуск помогает быстро перепроверить интересную связку.
           </p>
+        </div>
+      </section>
+
+      <section class="section sheet-details" aria-labelledby="sheet-details-title">
+        <div class="section-heading">
+          <p class="eyebrow">Структура таблицы</p>
+          <h2 id="sheet-details-title">Листы и настройки уже подготовлены</h2>
+        </div>
+        <div class="details-layout">
+          <div class="settings-shot" aria-label="Пример листа настроек CoinEx Settings">
+            <div class="settings-tabs">
+              <span>Start</span>
+              <span class="active">CoinEx Settings</span>
+              <span>CoinEx Arbitrage</span>
+              <span>FAQ</span>
+            </div>
+            <div class="settings-grid">
+              <div class="setting-key active">START_COIN</div><div class="setting-value active">USDT</div>
+              <div class="setting-key">START_AMOUNT</div><div class="setting-value">500</div>
+              <div class="setting-key">FEE_PCT</div><div class="setting-value">0.002</div>
+              <div class="setting-key">MIN_NET_PROFIT_PCT</div><div class="setting-value">-0.02</div>
+              <div class="setting-key">MAX_PAIR_SPREAD_PCT</div><div class="setting-value">0.02</div>
+              <div class="setting-key">TOP_RESULTS</div><div class="setting-value">100</div>
+              <div class="setting-key">LAST_SCAN</div><div class="setting-value">06.05</div>
+            </div>
+          </div>
+          <div class="sheet-copy">
+            <h3>Листы в каждом сканере</h3>
+            <ul class="feature-list">
+              <li><strong>Start</strong> - краткое описание продукта и запуск.</li>
+              <li><strong>Settings</strong> - бюджет входа, комиссия, фильтры и лимиты.</li>
+              <li><strong>Arbitrage</strong> - найденные расчетные связки, прибыль, финальная сумма и шаги.</li>
+              <li><strong>FAQ</strong> - подсказки по использованию и ручной проверке.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="settings-explain">
+          <div><strong>START_COIN</strong><span>стартовая монета, обычно USDT</span></div>
+          <div><strong>START_AMOUNT</strong><span>бюджет входа, который пользователь задает сам</span></div>
+          <div><strong>FEE_PCT</strong><span>комиссия биржи для более реалистичного расчета</span></div>
+          <div><strong>MIN_NET_PROFIT_PCT</strong><span>минимальный фильтр расчетного результата</span></div>
+          <div><strong>MAX_PAIR_SPREAD_PCT</strong><span>ограничение широкого спреда</span></div>
+          <div><strong>TOP_RESULTS</strong><span>сколько лучших связок показывать в таблице</span></div>
         </div>
       </section>
 
@@ -364,6 +442,10 @@
         <details>
           <summary>Почему автообновление 5 минут?</summary>
           <p>Это оптимальный режим с учетом ограничений Google Таблиц и публичных API бирж. Слишком частые автоматические запросы могут приводить к лимитам или временным блокировкам. Для быстрой перепроверки есть ручной запуск.</p>
+        </details>
+        <details>
+          <summary>Что делает меню Arb Scanner?</summary>
+          <p>Setup создает рабочие листы, Scan now запускает ручное сканирование, Auto update 5 min включает автообновление по расписанию. Покупатель управляет сканером прямо из Google Таблицы.</p>
         </details>
         <details>
           <summary>Можно менять бюджет и настройки?</summary>
