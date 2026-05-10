@@ -87,6 +87,23 @@
             </div>
           </div>
         </div>
+        <div class="mini-shots" aria-hidden="true">
+          <div class="mini-shot high">
+            <strong>Gate</strong>
+            <span>расчетный всплеск</span>
+            <b>+10.24%</b>
+          </div>
+          <div class="mini-shot mid">
+            <strong>CoinEx</strong>
+            <span>рабочий плюс</span>
+            <b>+1.18%</b>
+          </div>
+          <div class="mini-shot low">
+            <strong>OKX</strong>
+            <span>около нуля</span>
+            <b>-0.06%</b>
+          </div>
+        </div>
         <div class="hero-content">
           <p class="eyebrow">Google Sheets для анализа рынка</p>
           <h1 id="hero-title">Crypto Scanner Pack</h1>
@@ -117,11 +134,16 @@
             В настройках можно менять стартовую сумму, комиссию, минимальный процент, фильтры и автообновление.
             Покупатель сам выбирает бюджет входа и темп наблюдения за рынком.
           </p>
+          <p>
+            Автообновление настроено с учетом ограничений Google Таблиц: слишком частые автоматические запросы
+            могут приводить к лимитам и временным блокировкам. Поэтому режим 5 минут выбран как стабильный
+            и удобный для пользователя.
+          </p>
         </div>
         <div class="stat-row" aria-label="Ключевые факты">
           <div><span>6</span><small>бирж на выбор</small></div>
           <div><span>0</span><small>абонплаты</small></div>
-          <div><span>5</span><small>мин. автообновление</small></div>
+          <div><span>1</span><small>сек. ручной запуск</small></div>
         </div>
       </section>
 
@@ -144,7 +166,8 @@
               <li>Gate Scanner</li>
               <li>CoinEx Scanner</li>
               <li>Настройка бюджета входа</li>
-              <li>Настройка частоты обновления</li>
+              <li>Ручной запуск для точечной проверки</li>
+              <li>Оптимальное автообновление 5 минут</li>
               <li>Инструкция запуска</li>
             </ul>
             <a class="button primary full" href="#order">Оставить заявку</a>
@@ -211,53 +234,60 @@
           <div class="step">
             <span>3</span>
             <h3>Обновлять рынок</h3>
-            <p>Запуск вручную или автообновление каждые 5 минут через меню <strong>Arb Scanner</strong>.</p>
+            <p>Ручной запуск доступен в любой момент для точечной проверки. Автообновление настроено на 5 минут, чтобы не перегружать Google Таблицы и API бирж.</p>
           </div>
         </div>
       </section>
 
       <section class="section proof" aria-labelledby="proof-title">
-        <div class="preview-panel">
-          <div class="panel-head">
-            <span></span><span></span><span></span>
+        <div class="scenario-stack">
+          <div class="preview-panel">
+            <div class="panel-head">
+              <span></span><span></span><span></span>
+            </div>
+            <table>
+              <thead>
+                <tr>
+                  <th>Exchange</th>
+                  <th>Path</th>
+                  <th>Net %</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Gate</td>
+                  <td>USDT -> coin -> USDC -> USDT</td>
+                  <td class="green strong">10.24%</td>
+                </tr>
+                <tr>
+                  <td>CoinEx</td>
+                  <td>USDT -> coin -> BTC -> USDT</td>
+                  <td class="green">1.18%</td>
+                </tr>
+                <tr>
+                  <td>Bitget</td>
+                  <td>USDT -> coin -> ETH -> USDT</td>
+                  <td class="green">0.21%</td>
+                </tr>
+              </tbody>
+            </table>
           </div>
-          <table>
-            <thead>
-              <tr>
-                <th>Rank</th>
-                <th>Path</th>
-                <th>Net %</th>
-                <th>Step 1</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>1</td>
-                <td>USDT -> coin -> BTC -> USDT</td>
-                <td class="green">0.42%</td>
-                <td>BUY coin</td>
-              </tr>
-              <tr>
-                <td>2</td>
-                <td>USDT -> coin -> USDC -> USDT</td>
-                <td>-0.08%</td>
-                <td>BUY coin</td>
-              </tr>
-              <tr>
-                <td>3</td>
-                <td>USDT -> coin -> ETH -> USDT</td>
-                <td class="green">0.11%</td>
-                <td>BUY coin</td>
-              </tr>
-            </tbody>
-          </table>
+          <div class="scenario-note">
+            <strong>Рынок бывает разным:</strong>
+            иногда сканер показывает минус или около нуля, иногда появляются сильные расчетные всплески.
+          </div>
         </div>
         <div>
           <p class="eyebrow">Стратегический анализ</p>
-          <h2 id="proof-title">Быстрый отбор связок без межбиржевых переводов</h2>
+          <h2 id="proof-title">Вероятность расчетной прибыли появляется при совпадении условий</h2>
           <p>
             Сканер собирает путь, расчетный итог и шаги сделки в одном листе.
-            Ты сравниваешь варианты внутри выбранной биржи и не тратишь время на перевод активов между площадками.
+            Ты сравниваешь варианты внутри выбранной биржи и видишь, где есть потенциально интересная связка.
+            Реальный результат зависит от стакана, комиссии, лимитов и скорости исполнения.
+          </p>
+          <p>
+            Сценарии обновления продуманы под обычного пользователя: автообновление работает в устойчивом режиме,
+            а ручной запуск помогает быстро перепроверить интересную связку.
           </p>
         </div>
       </section>
@@ -332,8 +362,12 @@
           <p>Нет. Сканеры ищут внутрибиржевые связки внутри одной биржи: например Gate отдельно или CoinEx отдельно. Средства не нужно переводить между биржами, поэтому работа быстрее и проще.</p>
         </details>
         <details>
-          <summary>Можно менять бюджет и обновление?</summary>
-          <p>Да. В настройках таблицы можно менять стартовую сумму, комиссию, фильтры и частоту автообновления.</p>
+          <summary>Почему автообновление 5 минут?</summary>
+          <p>Это оптимальный режим с учетом ограничений Google Таблиц и публичных API бирж. Слишком частые автоматические запросы могут приводить к лимитам или временным блокировкам. Для быстрой перепроверки есть ручной запуск.</p>
+        </details>
+        <details>
+          <summary>Можно менять бюджет и настройки?</summary>
+          <p>Да. В настройках таблицы можно менять стартовую сумму, комиссию, фильтры и параметры сканирования. Сканер продуман так, чтобы покупатель мог адаптировать его под свой бюджет входа.</p>
         </details>
         <details>
           <summary>Есть абонентская плата?</summary>
