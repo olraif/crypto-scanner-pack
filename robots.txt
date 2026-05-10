@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://olraif.github.io/crypto-scanner-pack/sitemap.xml

@@ -458,6 +458,28 @@ th {
   font-weight: 700;
 }
 
+.seo-block {
+  padding-top: 30px;
+}
+
+.seo-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.seo-grid div {
+  padding: 22px;
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+}
+
+.seo-grid p {
+  color: var(--muted);
+  margin-bottom: 0;
+}
+
 .order-box {
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(280px, 0.7fr);
@@ -555,6 +577,7 @@ details p {
   .proof,
   .order-box,
   .product-grid,
+  .seo-grid,
   .steps {
     grid-template-columns: 1fr;
   }
