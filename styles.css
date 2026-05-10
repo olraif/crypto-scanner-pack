@@ -97,14 +97,17 @@ a {
 .sheet-backdrop {
   position: absolute;
   inset: 0;
-  display: grid;
-  place-items: center;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
   opacity: 0.92;
+  pointer-events: none;
 }
 
 .sheet-window {
-  width: min(1100px, 108vw);
-  transform: rotate(-4deg) translateX(14vw) scale(1.02);
+  width: min(900px, 52vw);
+  margin-right: 3vw;
+  transform: rotate(-4deg) translateY(10px);
   background: var(--white);
   border: 1px solid #c4d4cd;
   box-shadow: var(--shadow);
@@ -151,7 +154,8 @@ a {
 
 .hero-content {
   position: relative;
-  max-width: 760px;
+  z-index: 1;
+  max-width: min(760px, 48vw);
   padding-top: 12vh;
 }
 
@@ -530,8 +534,21 @@ details p {
     min-height: 760px;
   }
 
+  .sheet-backdrop {
+    align-items: flex-end;
+    justify-content: center;
+    opacity: 0.38;
+  }
+
   .sheet-window {
-    transform: rotate(-5deg) translateX(30vw) scale(1.2);
+    width: 980px;
+    margin-right: 0;
+    margin-bottom: 60px;
+    transform: rotate(-5deg) translateX(18vw) scale(1.05);
+  }
+
+  .hero-content {
+    max-width: 760px;
   }
 
   .intro,
