@@ -740,6 +740,37 @@ th {
   margin-bottom: 0;
 }
 
+.search-intent {
+  padding-top: 30px;
+}
+
+.intent-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.intent-grid article {
+  padding: 22px;
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+}
+
+.intent-grid p,
+.seo-note {
+  color: var(--muted);
+}
+
+.seo-note {
+  max-width: 940px;
+  margin: 18px 0 0;
+  padding: 16px 18px;
+  background: #eef5f1;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+}
+
 .order-box {
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(280px, 0.7fr);
@@ -867,6 +898,7 @@ details p {
   .order-box,
   .product-grid,
   .seo-grid,
+  .intent-grid,
   .settings-explain,
   .steps {
     grid-template-columns: 1fr;
